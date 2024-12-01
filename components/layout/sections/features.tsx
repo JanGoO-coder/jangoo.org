@@ -11,39 +11,39 @@ interface FeaturesProps {
 const featureList: FeaturesProps[] = [
   {
     icon: "TabletSmartphone",
-    title: "Mobile Friendly",
+    title: "Web & Mobile Design",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+      "Crafting visually stunning and user-friendly designs for both web and mobile applications.",
   },
   {
-    icon: "BadgeCheck",
-    title: "Social Proof",
+    icon: "Code",
+    title: "Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+      "Building robust and scalable web and mobile applications tailored to your needs.",
   },
   {
-    icon: "Goal",
-    title: "Targeted Content",
+    icon: "Fingerprint",
+    title: "Security",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+      "Implementing top-notch security measures to protect your applications and data.",
   },
   {
-    icon: "PictureInPicture",
-    title: "Strong Visuals",
+    icon: "ScanSearch",
+    title: "SEO Optimization",
     description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+      "Enhancing your online presence with effective SEO strategies to drive traffic.",
   },
   {
-    icon: "MousePointerClick",
-    title: "Clear CTA",
+    icon: "Users",
+    title: "Team Collaboration",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+      "Fostering a collaborative environment to ensure seamless project execution.",
   },
   {
-    icon: "Newspaper",
-    title: "Clear Headline",
+    icon: "Headset",
+    title: "Customer Support",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
+      "Providing exceptional customer support to address all your queries and concerns.",
   },
 ];
 
@@ -51,17 +51,15 @@ export const FeaturesSection = () => {
   return (
     <section id="features" className="container py-24 sm:py-32">
       <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
-        Features
+        Services
       </h2>
 
       <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-        What Makes Us Different
+        What Makes Our Team Stand Out
       </h2>
 
       <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-        fugiat, odit similique quasi sint reiciendis quidem iure veritatis optio
-        facere tenetur.
+        Discover the unique features that set our team apart in delivering exceptional web and mobile solutions.
       </h3>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

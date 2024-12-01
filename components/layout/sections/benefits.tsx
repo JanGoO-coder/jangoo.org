@@ -11,27 +11,27 @@ interface BenefitsProps {
 const benefitList: BenefitsProps[] = [
   {
     icon: "Blocks",
-    title: "Build Brand Trust",
+    title: "Expertise and Experience",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Our team has years of experience in web development, ensuring your project is in capable hands.",
   },
   {
     icon: "LineChart",
-    title: "More Leads",
+    title: "Customized Solutions",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
+      "We provide tailored solutions to meet your specific business needs and goals.",
   },
   {
     icon: "Wallet",
-    title: "Higher Conversions",
+    title: "Cost-Effective",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
+      "Get the best value for your investment with our competitive pricing and high-quality services.",
   },
   {
     icon: "Sparkle",
-    title: "Test Marketing Ideas",
+    title: "Innovative Ideas",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "We bring fresh and innovative ideas to the table, helping your website stand out from the competition.",
   },
 ];
 
@@ -43,12 +43,10 @@ export const BenefitsSection = () => {
           <h2 className="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Your Shortcut to Success
+            Why Choose Our Team
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
-            ducimus reprehenderit architecto rerum similique facere odit
-            deleniti necessitatibus quo quae.
+            Discover the advantages of partnering with us for your web development needs.
           </p>
         </div>
 

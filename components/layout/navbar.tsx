@@ -35,12 +35,24 @@ interface FeatureProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#testimonials",
-    label: "Testimonials",
+    href: "#hero",
+    label: "Home",
+  },
+  {
+    href: "#benefits",
+    label: "Benefits",
+  },
+  {
+    href: "#features",
+    label: "Features",
   },
   {
     href: "#team",
     label: "Team",
+  },
+  {
+    href: "#testimonials",
+    label: "Testimonials",
   },
   {
     href: "#contact",
@@ -54,18 +66,34 @@ const routeList: RouteProps[] = [
 
 const featureList: FeatureProps[] = [
   {
-    title: "Showcase Your Value ",
-    description: "Highlight how your product solves user problems.",
+    title: "Web & Mobile Design",
+    description:
+      "Crafting visually stunning and user-friendly designs for both web and mobile applications.",
   },
   {
-    title: "Build Trust",
+    title: "Development",
     description:
-      "Leverages social proof elements to establish trust and credibility.",
+      "Building robust and scalable web and mobile applications tailored to your needs.",
   },
   {
-    title: "Capture Leads",
+    title: "Security",
     description:
-      "Make your lead capture form visually appealing and strategically.",
+      "Implementing top-notch security measures to protect your applications and data.",
+  },
+  {
+    title: "SEO Optimization",
+    description:
+      "Enhancing your online presence with effective SEO strategies to drive traffic.",
+  },
+  {
+    title: "Team Collaboration",
+    description:
+      "Fostering a collaborative environment to ensure seamless project execution.",
+  },
+  {
+    title: "Customer Support",
+    description:
+      "Providing exceptional customer support to address all your queries and concerns.",
   },
 ];
 
@@ -128,24 +156,24 @@ export const Navbar = () => {
       {/* <!-- Desktop --> */}
       <NavigationMenu className="hidden lg:block mx-auto">
         <NavigationMenuList>
-          <NavigationMenuItem>
+          {/* <NavigationMenuItem>
             <NavigationMenuTrigger className="bg-card text-base">
               Features
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <div className="grid w-[600px] grid-cols-2 gap-5 p-4">
+              <div className="grid w-[800px] grid-cols-3 gap-5 p-4">
                 <Image
                   src="https://avatars.githubusercontent.com/u/75042455?v=4"
                   alt="RadixLogo"
-                  className="h-full w-full rounded-md object-cover"
+                  className="h-full w-full rounded-md object-cover col-span-1"
                   width={600}
                   height={600}
                 />
-                <ul className="flex flex-col gap-2">
+                <ul className="flex flex-wrap gap-2 col-span-2">
                   {featureList.map(({ title, description }) => (
                     <li
                       key={title}
-                      className="rounded-md p-3 text-sm hover:bg-muted"
+                      className="w-[calc(50%-0.5rem)] rounded-md p-3 text-sm hover:bg-muted"
                     >
                       <p className="mb-1 font-semibold leading-none text-foreground">
                         {title}
@@ -158,7 +186,7 @@ export const Navbar = () => {
                 </ul>
               </div>
             </NavigationMenuContent>
-          </NavigationMenuItem>
+          </NavigationMenuItem> */}
 
           <NavigationMenuItem>
             {routeList.map(({ href, label }) => (
