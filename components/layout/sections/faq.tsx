@@ -13,39 +13,37 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free NextJS Shadcn template.",
+    question: "What web development services do you offer?",
+    answer: "We offer full-stack web development services including frontend, backend, and database management.",
     value: "item-1",
   },
   {
-    question: "Duis aute irure dolor in reprehenderit in voluptate velit?",
+    question: "Can you help with website design?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam consectetur sapiente, iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "Yes, our team specializes in creating responsive and user-friendly website designs tailored to your needs.",
     value: "item-2",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet Consectetur natus dolor minus quibusdam?",
+    question: "Do you provide DevOps services?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis.",
+      "Absolutely. We offer comprehensive DevOps services including CI/CD pipeline setup, cloud infrastructure management, and automated deployments.",
     value: "item-3",
   },
   {
-    question: "Excepteur sint occaecat cupidata non proident sunt?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    question: "What technologies do you use for web development?",
+    answer: "We use a variety of technologies including React, Next.js, Node.js, and various cloud services like AWS and Azure.",
     value: "item-4",
   },
   {
-    question:
-      "Enim ad minim veniam, quis nostrud exercitation ullamco laboris?",
-    answer: "consectetur adipisicing elit. Sint labore.",
+    question: "Can you assist with SEO optimization?",
+    answer: "Yes, we provide SEO optimization services to help improve your website's visibility and ranking on search engines.",
     value: "item-5",
   },
 ];
 
 export const FAQSection = () => {
   return (
-    <section id="faq" className="container md:w-[700px] py-24 sm:py-32">
+    <section id="faq" className="container md:w-[700px] py-24 sm:py-32 scroll-mt-16">
       <div className="text-center mb-8">
         <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
           FAQS

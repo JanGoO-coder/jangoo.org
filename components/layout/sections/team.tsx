@@ -1,6 +1,7 @@
 import GithubIcon from "@/components/icons/github-icon";
 import LinkedInIcon from "@/components/icons/linkedin-icon";
 import XIcon from "@/components/icons/x-icon";
+import DribbbleIcon from "@/components/icons/dribbble-icon";
 import {
   Card,
   CardContent,
@@ -10,10 +11,13 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
+import BehanceIcon from "@/components/icons/behance-icon";
+import PeerlistIcon from "@/components/icons/peerlist-icon";
 interface TeamProps {
   imageUrl: string;
   firstName: string;
   lastName: string;
+  portfolio?: string;
   positions: string[];
   socialNetworks: SocialNetworkProps[];
 }
@@ -24,9 +28,29 @@ interface SocialNetworkProps {
 export const TeamSection = () => {
   const teamList: TeamProps[] = [
     {
-      imageUrl: "https://i.pravatar.cc/250?img=58",
-      firstName: "Leo",
-      lastName: "Miranda",
+      imageUrl: "https://i.imgur.com/1c8jzeC.jpeg",
+      firstName: "M. Ali",
+      lastName: "Shehzad",
+      positions: ["Cloud Native Developer", " Kubernetes Orchestrator"],
+      socialNetworks: [
+        {
+          name: "LinkedIn",
+          url: "https://www.linkedin.com/in/leopoldo-miranda/",
+        },
+        {
+          name: "Github",
+          url: "https://github.com/leoMirandaa",
+        },
+        {
+          name: "X",
+          url: "https://x.com/leo_mirand4",
+        },
+      ],
+    },
+    {
+      imageUrl: "https://i.imgur.com/Om3RbAF.jpeg",
+      firstName: "Asad",
+      lastName: "Ali",
       positions: ["Vue Fronted Developer", "Creator Of This Website"],
       socialNetworks: [
         {
@@ -44,27 +68,38 @@ export const TeamSection = () => {
       ],
     },
     {
-      imageUrl:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      firstName: "Elizabeth",
-      lastName: "Moore",
-      positions: ["UI/UX Designer"],
+      imageUrl: "https://i.imgur.com/fGdb9ps.jpeg",
+      firstName: "Danish",
+      lastName: "Fareed",
+      portfolio: "https://danish.jangoo.org",
+      positions: ["UI/UX Designer", "NEXT Developer"],
       socialNetworks: [
         {
           name: "LinkedIn",
-          url: "https://www.linkedin.com/in/leopoldo-miranda/",
+          url: "https://www.linkedin.com/in/danish-fareed-graphics/",
         },
         {
-          name: "X",
-          url: "https://x.com/leo_mirand4",
+          name: "Dribbble",
+          url: "https://dribbble.com/DanishFareed",
+        },
+        {
+          name: "Behance",
+          url: "https://dribbble.com/DanishFareed",
+        },
+        {
+          name: "Github",
+          url: "https://dribbble.com/DanishFareed",
+        },
+        {
+          name: "Peerlist",
+          url: "https://dribbble.com/DanishFareed",
         },
       ],
     },
     {
-      imageUrl:
-        "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      firstName: "David",
-      lastName: "Diaz",
+      imageUrl: "https://i.imgur.com/9B40gAN.jpeg",
+      firstName: "Malik",
+      lastName: "Irfan",
       positions: ["Machine Learning Engineer", "TensorFlow Tinkerer"],
       socialNetworks: [
         {
@@ -74,27 +109,6 @@ export const TeamSection = () => {
         {
           name: "Github",
           url: "https://github.com/leoMirandaa",
-        },
-      ],
-    },
-    {
-      imageUrl:
-        "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      firstName: "Sarah",
-      lastName: "Robinson",
-      positions: ["Cloud Native Developer", " Kubernetes Orchestrator"],
-      socialNetworks: [
-        {
-          name: "LinkedIn",
-          url: "https://www.linkedin.com/in/leopoldo-miranda/",
-        },
-        {
-          name: "Github",
-          url: "https://github.com/leoMirandaa",
-        },
-        {
-          name: "X",
-          url: "https://x.com/leo_mirand4",
         },
       ],
     },
@@ -171,11 +185,20 @@ export const TeamSection = () => {
         return <GithubIcon />;
       case "X":
         return <XIcon />;
+      case "Dribbble":
+        return <DribbbleIcon />;
+      case "Behance":
+        return <BehanceIcon />;
+      case "Peerlist":
+        return <PeerlistIcon />;
     }
   };
 
   return (
-    <section id="team" className="container lg:w-[75%] py-24 sm:py-32">
+    <section
+      id="team"
+      className="container lg:w-[75%] py-24 sm:py-32 scroll-mt-16"
+    >
       <div className="text-center mb-8">
         <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
           Team
@@ -189,7 +212,14 @@ export const TeamSection = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {teamList.map(
           (
-            { imageUrl, firstName, lastName, positions, socialNetworks },
+            {
+              imageUrl,
+              firstName,
+              lastName,
+              portfolio,
+              positions,
+              socialNetworks,
+            },
             index
           ) => (
             <Card

@@ -9,7 +9,7 @@ import Link from "next/link";
 export const HeroSection = () => {
   const { theme } = useTheme();
   return (
-    <section id="hero" className="container w-full">
+    <section id="hero" className="container w-full scroll-mt-12">
       <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-28 md:py-44">
         <div className="text-center space-y-8">
           {/* <Badge variant="outline" className="text-sm py-2">
