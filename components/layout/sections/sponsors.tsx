@@ -1,51 +1,31 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { Icon } from "@/components/ui/icon";
 import { Marquee } from "@devnomic/marquee";
 import "@devnomic/marquee/dist/index.css";
-import { icons } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 interface sponsorsProps {
   icon: string;
   name: string;
 }
 
 const sponsors: sponsorsProps[] = [
-  {
-    icon: "Crown",
-    name: "Acmebrand",
-  },
-  {
-    icon: "Vegan",
-    name: "Acmelogo",
-  },
-  {
-    icon: "Ghost",
-    name: "Acmesponsor",
-  },
-  {
-    icon: "Puzzle",
-    name: "Acmeipsum",
-  },
-  {
-    icon: "Squirrel",
-    name: "Acme",
-  },
-  {
-    icon: "Cookie",
-    name: "Accmee",
-  },
-  {
-    icon: "Drama",
-    name: "Acmetech",
-  },
+  
 ];
 
 export const SponsorsSection = () => {
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     <section id="sponsors" className="max-w-[75%] mx-auto pb-24 sm:pb-32">
-      <h2 className="text-lg md:text-xl text-center mb-6">
-        Our Clients
-      </h2>
+      {/* <h2 className="text-[#0000008c] font-normal text-md text-center mb-12">
+        Our Clients & Projects
+      </h2> */}
 
       <div className="mx-auto">
         <Marquee
@@ -54,20 +34,30 @@ export const SponsorsSection = () => {
           innerClassName="gap-[3rem]"
           pauseOnHover
         >
-          {sponsors.map(({ icon, name }) => (
-            <div
-              key={name}
-              className="flex items-center text-xl md:text-2xl font-medium"
-            >
-              <Icon
-                name={icon as keyof typeof icons}
-                size={32}
-                color="white"
-                className="mr-2"
-              />
-              {name}
-            </div>
-          ))}
+          <div className="flex justify-center gap-20 h-8 items-center opacity-50">
+            {theme === 'light' && mounted ? (
+              <>
+              <img className="h-8" src="https://firebasestorage.googleapis.com/v0/b/designerdanish-1a0eb.appspot.com/o/Jangoo.org%2Framble.svg?alt=media&token=3567c3b3-aaec-4bc1-8513-c16ef993c462" alt="RAMBLE" />
+              <img className="h-6" src="https://firebasestorage.googleapis.com/v0/b/designerdanish-1a0eb.appspot.com/o/Jangoo.org%2Fozaar.svg?alt=media&token=fb4f851c-b780-4e79-8abb-09c97fa0328f" alt="Ozaar" />
+              <img className="h-8" src="https://firebasestorage.googleapis.com/v0/b/designerdanish-1a0eb.appspot.com/o/Jangoo.org%2Fkeyhole.svg?alt=media&token=064c4de8-fc45-4649-b7ee-fd9db724063f" alt="Keyhole" />
+              <img className="h-6" src="https://firebasestorage.googleapis.com/v0/b/designerdanish-1a0eb.appspot.com/o/Jangoo.org%2Fhorizongo.svg?alt=media&token=1a3c9e52-140a-42fa-9a10-a602dcae12dc" alt="Horiizongo" />
+              <img className="h-8" src="https://firebasestorage.googleapis.com/v0/b/designerdanish-1a0eb.appspot.com/o/Jangoo.org%2FLCA.svg?alt=media&token=a3ea303a-71fd-4687-af49-d21a1e3da118" alt="LCA" />
+              <img className="h-6" src="https://firebasestorage.googleapis.com/v0/b/designerdanish-1a0eb.appspot.com/o/Jangoo.org%2FTyponify.svg?alt=media&token=5bc83f27-d2d8-4556-b43b-b8b5782f5110" alt="Typonify" />
+            
+              </>
+            ) : (
+              <>
+              <img className="h-8" src="https://firebasestorage.googleapis.com/v0/b/designerdanish-1a0eb.appspot.com/o/Jangoo.org%2Flight%2FFrame%201000011891.svg?alt=media&token=8dffa555-7600-44ce-8f8a-5fb834976de9" alt="RAMBLE" />
+              <img className="h-6" src="https://firebasestorage.googleapis.com/v0/b/designerdanish-1a0eb.appspot.com/o/Jangoo.org%2Flight%2Fozaar-light.svg?alt=media&token=0e3adf6b-5f5f-4201-9521-81e8bf7891c9" alt="Ozaar" />
+              <img className="h-8" src="https://firebasestorage.googleapis.com/v0/b/designerdanish-1a0eb.appspot.com/o/Jangoo.org%2Flight%2FLogo.svg?alt=media&token=5c08bd16-c9d5-4282-88b4-13d5e7b17dd0" alt="Keyhole" />
+              <img className="h-6" src="https://firebasestorage.googleapis.com/v0/b/designerdanish-1a0eb.appspot.com/o/Jangoo.org%2Flight%2FGroup%2021.svg?alt=media&token=798b08d0-12c3-4dee-bccb-570f01afde67" alt="Horiizongo" />
+              <img className="h-8" src="https://firebasestorage.googleapis.com/v0/b/designerdanish-1a0eb.appspot.com/o/Jangoo.org%2Flight%2FGroup%20427319118.svg?alt=media&token=a1c5bcd5-475a-4c17-ac0a-b3717d357488" alt="LCA" />
+              <img className="h-6" src="https://firebasestorage.googleapis.com/v0/b/designerdanish-1a0eb.appspot.com/o/Jangoo.org%2Flight%2FGroup%201000006158.svg?alt=media&token=df94dd84-d214-445a-b2d4-90a8e1aae519" alt="Typonify" />
+            
+              </>
+            )}
+          </div>
+          
         </Marquee>
       </div>
     </section>
