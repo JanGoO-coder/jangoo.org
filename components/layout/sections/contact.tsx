@@ -278,7 +278,7 @@ export const ContactSection = () => {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="mt-4"
+                      className="mt-4 !bg-primary !text-primary-foreground hover:!bg-primary/90"
                     >
                       {isSubmitting ? "Sending..." : "Send message"}
                     </Button>
