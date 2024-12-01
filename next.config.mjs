@@ -18,7 +18,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "avatars.githubusercontent.com",
       },
+      {
+        protocol: "https",
+        hostname: "i.imgur.com",
+      },
     ],
+  },
+  env: {
+    RESEND_API_KEY: process.env.RESEND_API_KEY,
   },
 };
 
