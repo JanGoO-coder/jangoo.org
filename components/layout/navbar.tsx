@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { ChevronsDown, Github, Menu } from "lucide-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Sheet,
   SheetContent,
@@ -22,6 +23,7 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { ToggleTheme } from "./toogle-theme";
+import { useTheme } from "next-themes";
 
 interface RouteProps {
   href: string;
@@ -34,6 +36,7 @@ interface FeatureProps {
 }
 
 const routeList: RouteProps[] = [
+  
   {
     href: "#hero",
     label: "Home",
@@ -98,12 +101,17 @@ const featureList: FeatureProps[] = [
 ];
 
 export const Navbar = () => {
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
   const [isOpen, setIsOpen] = React.useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
       <Link href="/" className="font-bold text-lg flex items-center">
-        <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" />
-        Shadcn
+        {theme === 'light' && mounted ? <img className="w-9 h-9 mr-2 border border-secondary rounded-lg" src="./img/Logo-light.svg" alt="" /> : <img className="w-9 h-9 mr-2 border border-secondary rounded-lg" src="./img/Logo-dark.svg" alt="" />}
+        JanGoO
       </Link>
       {/* <!-- Mobile --> */}
       <div className="flex items-center lg:hidden">

@@ -1,17 +1,27 @@
+"use client";
 import { Separator } from "@/components/ui/separator";
 import { ChevronsDownIcon } from "lucide-react";
+import { useTheme } from "next-themes";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export const FooterSection = () => {
+  const [mounted, setMounted] = useState(false);
+    const { theme } = useTheme();
+    useEffect(() => {
+      setMounted(true);
+    }, []);
   return (
+    
     <footer id="footer" className="container py-24 sm:py-32">
       <div className="p-10 bg-card border border-secondary rounded-2xl">
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
           <div className="col-span-full xl:col-span-2">
             <Link href="#" className="flex font-bold items-center">
-              <ChevronsDownIcon className="w-9 h-9 mr-2 bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg border border-secondary" />
+            {theme === 'light' && mounted ? <img className="w-9 h-9 mr-2 border border-secondary rounded-lg" src="./img/Logo-light.svg" alt="" /> : <img className="w-9 h-9 mr-2 border border-secondary rounded-lg" src="./img/Logo-dark.svg" alt="" />}
+          
 
-              <h3 className="text-2xl">Shadcn</h3>
+              <h3 className="text-2xl">JanGoO</h3>
             </Link>
           </div>
 
@@ -106,10 +116,10 @@ export const FooterSection = () => {
             &copy; 2024 Designed and developed by
             <Link
               target="_blank"
-              href="https://github.com/leoMirandaa"
+              href="https://github.com/JanGoO-coder"
               className="text-primary transition-all border-primary hover:border-b-2 ml-1"
             >
-              Leo Miranda
+              Team JanGoO
             </Link>
           </h3>
         </section>
