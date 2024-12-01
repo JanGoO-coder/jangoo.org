@@ -8,8 +8,8 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Shadcn - Landing template",
-  description: "Landing template from Shadcn",
+  title: "JanGoO",
+  description: "Inovation Driven by Purpose",
 };
 
 export default function RootLayout({

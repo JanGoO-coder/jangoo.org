@@ -28,10 +28,10 @@ interface SocialNetworkProps {
 export const TeamSection = () => {
   const teamList: TeamProps[] = [
     {
-      imageUrl: "https://i.imgur.com/1c8jzeC.jpeg",
+      imageUrl: "https://i.imgur.com/WwCNh2t.jpeg",
       firstName: "M. Ali",
       lastName: "Shehzad",
-      positions: ["Cloud Native Developer", " Kubernetes Orchestrator"],
+      positions: ["Digital Solution Provider"],
       socialNetworks: [
         {
           name: "LinkedIn",
@@ -51,7 +51,7 @@ export const TeamSection = () => {
       imageUrl: "https://i.imgur.com/Om3RbAF.jpeg",
       firstName: "Asad",
       lastName: "Ali",
-      positions: ["Vue Fronted Developer", "Creator Of This Website"],
+      positions: ["Full Stack Developer"],
       socialNetworks: [
         {
           name: "LinkedIn",
@@ -72,7 +72,7 @@ export const TeamSection = () => {
       firstName: "Danish",
       lastName: "Fareed",
       portfolio: "https://danish.jangoo.org",
-      positions: ["UI/UX Designer", "NEXT Developer"],
+      positions: ["Product Designer"],
       socialNetworks: [
         {
           name: "LinkedIn",
@@ -97,10 +97,10 @@ export const TeamSection = () => {
       ],
     },
     {
-      imageUrl: "https://i.imgur.com/9B40gAN.jpeg",
+      imageUrl: "https://i.imgur.com/HZv63AF.png",
       firstName: "Malik",
       lastName: "Irfan",
-      positions: ["Machine Learning Engineer", "TensorFlow Tinkerer"],
+      positions: ["Backend Developer"],
       socialNetworks: [
         {
           name: "LinkedIn",
@@ -163,15 +163,21 @@ export const TeamSection = () => {
               className="bg-white dark:bg-card flex flex-col h-full overflow-hidden group/hoverimg"
             >
               <CardHeader className="p-0 gap-0">
-                <div className="h-full overflow-hidden">
-                  <Image
-                    src={imageUrl}
-                    alt=""
-                    width={300}
-                    height={300}
-                    className="w-full aspect-square object-cover saturate-0 transition-all duration-200 ease-linear size-full group-hover/hoverimg:saturate-100 group-hover/hoverimg:scale-[1.01]"
-                  />
-                </div>
+                <Link
+                  href={portfolio ?? "#"}
+                  target="_blank"
+                  className="group/hoverimg"
+                >
+                  <div className="h-full overflow-hidden">
+                    <Image
+                      src={imageUrl}
+                      alt=""
+                      width={300}
+                      height={300}
+                      className="w-full aspect-square object-cover saturate-100 transition-all duration-200 ease-linear size-full group-hover/hoverimg:saturate-0 group-hover/hoverimg:scale-[1.01] cursor-pointer"
+                    />
+                  </div>
+                </Link>
                 <CardTitle className="py-6 pb-4 px-6">
                   {firstName}
                   <span className="text-primary ml-2">{lastName}</span>
