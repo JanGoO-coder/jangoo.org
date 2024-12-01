@@ -9,7 +9,7 @@ import Link from "next/link";
 export const HeroSection = () => {
   const { theme } = useTheme();
   return (
-    <section id="hero" className="container w-full scroll-mt-12">
+    <section id="hero" className="container w-full">
       <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-28 md:py-44">
         <div className="text-center space-y-8">
           {/* <Badge variant="outline" className="text-sm py-2">
@@ -23,9 +23,9 @@ export const HeroSection = () => {
             <h1>
               Transforming your
               <span className="text-transparent px-2 bg-gradient-to-r from-[#00a2ff] to-[#007AFF] bg-clip-text">
-              visions
+              Visions
               </span>
-              into reality
+              into Reality
             </h1>
           </div>
 
