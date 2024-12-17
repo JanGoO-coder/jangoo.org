@@ -37,7 +37,11 @@ export const HeroSection = () => {
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
             <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
-              Start Conversation
+            <Link
+                href="#contact"
+              >
+                Start Conversation
+              </Link>
               <SendHorizonal className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
             </Button>
 
@@ -47,7 +51,7 @@ export const HeroSection = () => {
               className="w-5/6 md:w-1/4 font-bold"
             >
               <Link
-                href="https://github.com/nobruf/shadcn-landing-page.git"
+                href="#team"
                 target="_blank"
               >
                 Meet the team
