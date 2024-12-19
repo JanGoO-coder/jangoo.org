@@ -97,7 +97,7 @@ export const FooterSection = () => {
             </div>
 
             <div>
-              <Link href="#" className="opacity-60 hover:opacity-100">
+              <Link href="https://discord.gg/84wgpJqsCY" className="opacity-60 hover:opacity-100" target="_blank">
                 Discord
               </Link>
             </div>
