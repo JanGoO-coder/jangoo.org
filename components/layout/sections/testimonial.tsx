@@ -27,7 +27,7 @@ interface ReviewProps {
 const reviewList: ReviewProps[] = [
   {
     image: "https://github.com/shadcn.png",
-    name: "John Doe",
+    name: "Muhammad Usman",
     userName: "Product Manager",
     comment:
       "Wow NextJs + Shadcn is awesome!. This template lets me change colors, fonts and images to match my brand identity. ",
@@ -35,7 +35,7 @@ const reviewList: ReviewProps[] = [
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Sophia Collins",
+    name: "Muhammad Ali Shahzad",
     userName: "Cybersecurity Analyst",
     comment:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. ",
@@ -44,18 +44,18 @@ const reviewList: ReviewProps[] = [
 
   {
     image: "https://github.com/shadcn.png",
-    name: "Adam Johnson",
+    name: "Ch Mahad",
     userName: "Chief Technology Officer",
     comment:
-      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
     rating: 4.9,
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Ethan Parker",
+    name: "Babar Ali",
     userName: "Data Scientist",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore et dolore magna.",
     rating: 5.0,
   },
   {
@@ -63,16 +63,16 @@ const reviewList: ReviewProps[] = [
     name: "Ava Mitchell",
     userName: "IT Project Manager",
     comment:
-      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud incididunt consectetur adipiscing elit.",
-    rating: 5.0,
+      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud incididunt.",
+    rating: 4.5,
   },
   {
     image: "https://github.com/shadcn.png",
     name: "Isabella Reed",
     userName: "DevOps Engineer",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    rating: 4.9,
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.",
+    rating: 4.5,
   },
 ];
 
@@ -85,7 +85,7 @@ export const TestimonialSection = () => {
         </h2>
 
         <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-          Hear What Our 1000+ Clients Say
+          Hear What Our 100+ Clients Say
         </h2>
       </div>
 

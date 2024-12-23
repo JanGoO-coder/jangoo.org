@@ -119,27 +119,27 @@ export const ContactSection = () => {
               </p>
 
               {/* Contact Details */}
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-8">
                 <div>
-                  <div className="flex gap-2 mb-1">
-                    <Phone />
-                    <div className="font-bold">Call us</div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <Phone className="h-5"/>
+                    <div className="font-normal">Call us</div>
                   </div>
                   <div>+92 304 3388800</div>
                 </div>
 
                 <div>
-                  <div className="flex gap-2 mb-1">
-                    <Mail />
-                    <div className="font-bold">Mail US</div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <Mail className="h-5"/>
+                    <div className="font-normal">Mail US</div>
                   </div>
                   <div>asadalijangoo@gmail.com</div>
                 </div>
 
                 <div>
-                  <div className="flex gap-2">
-                    <Clock />
-                    <div className="font-bold">Availability</div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <Clock className="h-5"/>
+                    <div className="font-normal">Availability</div>
                   </div>
 
                   <div>
@@ -160,7 +160,7 @@ export const ContactSection = () => {
                     className="grid w-full gap-4"
                   >
                     {/* Name Fields */}
-                    <div className="flex flex-col md:!flex-row gap-8">
+                    <div className="flex flex-col md:!flex-row gap-8 -mt-5">
                       <FormField
                         control={form.control}
                         name="firstName"
@@ -278,7 +278,7 @@ export const ContactSection = () => {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="mt-4 !bg-primary !text-primary-foreground hover:!bg-primary/90"
+                      className="mt-4 !bg-primary -mb-5 !text-primary-foreground hover:!bg-primary/90"
                     >
                       {isSubmitting ? "Sending..." : "Send message"}
                     </Button>

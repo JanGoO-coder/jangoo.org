@@ -45,8 +45,8 @@ export const BenefitsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Why Choose Our Team
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Discover the advantages of partnering with us for your web development needs.
+          <p className="text-lg text-muted-foreground mb-8">
+            Discover the advantages of partnering with us for your web development needs. Our team has years of experience in web development, ensuring your project is in capable hands.
           </p>
         </div>
 
@@ -54,7 +54,7 @@ export const BenefitsSection = () => {
           {benefitList.map(({ icon, title, description }, index) => (
             <Card
               key={title}
-              className="bg-white dark:bg-card hover:bg-background transition-all delay-75 group/number"
+              className="bg-white dark:bg-card hover:shadow-lg delay-75 group/number cursor-pointer duration-300"
             >
               <CardHeader>
                 <div className="flex justify-between">
@@ -62,7 +62,7 @@ export const BenefitsSection = () => {
                     name={icon as keyof typeof icons}
                     size={32}
                     color="hsl(var(--primary))"
-                    className="mb-6 text-primary"
+                    className="mb-6 text-primary opacity-60"
                   />
                   <span className="text-5xl text-muted-foreground/15 font-medium transition-all delay-75 group-hover/number:text-muted-foreground/30">
                     0{index + 1}

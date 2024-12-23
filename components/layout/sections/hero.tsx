@@ -12,12 +12,12 @@ export const HeroSection = () => {
     <section id="hero" className="container w-full">
       <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-28 md:py-44">
         <div className="text-center space-y-8">
-          {/* <Badge variant="outline" className="text-sm py-2">
+          <Badge variant="outline" className="text-sm py-2">
             <span className="mr-2 text-primary">
-              <Badge>New</Badge>
+              <Badge>Hey!</Badge>
             </span>
-            <span> Design is out now! </span>
-          </Badge> */}
+            <span> Welcome to JanGoO </span>
+          </Badge>
 
           <div className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
             <h1>
@@ -29,7 +29,7 @@ export const HeroSection = () => {
             </h1>
           </div>
 
-          <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
+          <p className="max-w-screen-sm mx-auto text-lg text-muted-foreground">
             {`We are more than just a team; we are your partners in innovation. 
             From design and development to deployment and AI technologies, 
             we offer comprehensive solutions to bring your vision to life.`}
